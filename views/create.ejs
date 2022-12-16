@@ -1,0 +1,21 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="container m-auto">
+    <form action="/blogs" method="POST">
+      <label for="title">Blog title:</label>
+      <input class="shadow appearance-none border mb-3 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="title" name="title" required>
+      <label for="snippet">Blog snippet:</label>
+      <input class="shadow appearance-none border mb-3 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="snippet" name="snippet" required>
+      <label for="body">Blog body:</label>
+      <textarea class="shadow appearance-none border mb-3 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="body" name="body" required></textarea>
+      <button type="submit" class="bg-red-500 px-4 py-1 rounded-md mt-5 text-white">Submit</button>
+    </form>
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>
